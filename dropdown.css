@@ -1,0 +1,60 @@
+ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  min-width: 160px;
+  max-width: 50vw;
+  max-height: 80vh;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 28px;
+  text-align: left;
+  color: var(--dropdown-text-color, #333);
+  background-color: var(--dropdown-bg, #fff);
+  border: 1px solid var(--dropdown-border-color, rgba(0,0,0,0.15));
+  border-radius: 4px;
+  box-shadow: 0 6px 12px var(--dropdown-shadow-color, rgba(0,0,0,0.175));
+  background-clip: padding-box;
+  white-space: nowrap;
+  flex-direction: column;
+  list-style: none;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+li > * {
+  display: flex;
+  padding: 0px 20px;
+  clear: both;
+  align-items: center;
+}
+li > a {
+  user-select: none;
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+li > a:hover {
+  color: var(--dropdown-item-hover-text-color, #262626);
+  background-color: var(--dropdown-item-hover-bg, #f5f5f5);
+}
+li.selected {
+  color: var(--dropdown-item-hover-text-color, #262626);
+  background-color: var(--dropdown-item-hover-bg, #f5f5f5);
+  outline: 0;
+  box-shadow: 0 0px 0px 3px var(--dropdown-item-select-border-color, #66afe999);
+  transition: border-color ease-in-out 0.15s,box-shadow ease-in-out 0.15s;
+}
+li.message {
+  pointer-events: none;
+  cursor: not-allowed;
+}
+img {
+  height: 1.3em;
+  margin-right: 3px;
+  display: inline-block;
+}
